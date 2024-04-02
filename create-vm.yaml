@@ -1,0 +1,24 @@
+---
+#https://docs.ansible.com/ansible/latest/collections/community/general/proxmox_kvm_module.html
+- hosts:  pvenodes
+  become: false
+  gather_facts: false
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+      
+  vars_files:
+    - vars/api-key.yaml
+  
+  tasks:
+  - name: Create vm with min options
+    proxmox_kvm:
+      api_user: ansible@pam
+      api_token_id: ansible-token
+      api_token_secret: "{{ api_key }}"
+      api_host:  pvenodes
+      node: smac
+      name: vmtest01
+      cores: 2
+      memory: 1024
+      sata:
+        sata0: 'LinuxVMs:30,format=raw'
