@@ -7,19 +7,20 @@
       
   vars_files:
     - vars/api-key.yaml
+    - vars/vars.yaml
   
   tasks:
 
   - name: Clone VM
     proxmox_kvm:
-      api_user: ansible@pam
+      api_user: "{{ api_user }}"
       api_token_id: ansible-token
       api_token_secret: "{{ api_key }}"
-      api_host:  pvenodes
-      node: smac
-      clone: ubuntu-desktop-temp
+      api_host:  "{{ node }}"
+      node: "{{ node }}"
+      clone: ubuntu-srv-temp
       name: testvm04
-      storage: LinuxVMs
+      storage: "{{ storage }}"
       full: true
       format: unspecified
       timeout: 500
