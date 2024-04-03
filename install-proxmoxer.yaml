@@ -1,9 +1,0 @@
-- hosts: pvenodes
-  become: true
-  tasks:
-
-  - name: install proxmoxer
-    apt:
-      name:
-      - python3-proxmoxer
-      state:  latest
