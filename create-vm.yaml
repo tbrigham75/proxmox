@@ -18,7 +18,7 @@
       api_token_secret: "{{ api_key }}"
       api_host:  "{{ node }}"
       node: "{{ node }}"
-      name: vmtest01
+      name: vmtest02
       cores: 2
       memory: 1024
       sata:

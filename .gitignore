@@ -1,2 +1,3 @@
 vars/api-key.yaml
 vars/ssh-key.yaml
+vars/vars.yaml
