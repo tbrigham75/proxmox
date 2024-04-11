@@ -17,7 +17,7 @@
       api_token_id: ansible-token
       api_token_secret: "{{ api_key }}"
       api_host:  "{{ node }}"
-      node: sm"{{ node }}"
+      node: "{{ node }}"
       clone: ubuntu-cloud-template
       name: k3smast01
       storage: "{{ storage }}"
@@ -73,7 +73,7 @@
       api_token_id: ansible-token
       api_token_secret: "{{ api_key }}"
       api_host:  "{{ node }}"
-      node: s"{{ node }}"
+      node: "{{ node }}"
       clone: ubuntu-cloud-template
       name: k3work02
       storage: "{{ storage }}"
